@@ -6,11 +6,11 @@
     <title>Exercício 4</title>
 </head>
 <body>
-<form action="index.php" method="get">
+<form action="ex4.php" method="get">
         <fieldset>
-            <legend>Digite a sua idade para saber se você poderá votar:</legend>
-        <label for="idade">idade</label>
-        <input type="text" name="idade" id="idade" placeholder="idade" required>
+            <legend>Digite um mês para saber se está no primeiro o no segundo semestre, digite a primeira letra maiúscula:</legend>
+        <label for="mes">Mês</label>
+        <input type="text" name="mes" id="mes" placeholder="mês" required>
         <br>
 
           <br>
@@ -20,19 +20,16 @@
 
     <?php
     //Elabore um programa que irá receber o nome de um mês, e exiba se o mês é do primeiro semestre ou segundo semestre.
-     if (($_GET['idade']<16)){
-      echo "Não tem idade suficiente para votar!";
+     if (($_GET['mes']== "Janeiro") || ($_GET['mes'] =="Fevereiro") || ($_GET['mes'] =="Março") || ($_GET['mes'] == "Abril") || ($_GET['mes']== "Maio") ||
+     ($_GET['mes'] == "Junho")){
+      echo "Primeiro semestre!";
         
     } 
-    else if (($_GET['idade']>=16 && ($_GET['idade']<18))){
-        echo "Você pode votar, mas não é obrigatório!";
+    else if (($_GET['mes']== "Julho") || ($_GET['mes'] == "Agosto") || ($_GET['mes'] == "Setembro") || ($_GET['mes'] == "Outubro") || ($_GET['mes']== "Novembro") ||
+         ($_GET['mes'] == "Dezembro")){
+        echo "Segundo semestre!";
     }
-    else if (($_GET['idade']>=18 && ($_GET['idade']<=69))){
-        echo "Seu voto é obrigatório!";
-    }
-    else if (($_GET['idade']>=70)){
-        echo "Você pode votar, mas o seu voto não é obrigatório! ";
-    }
+
     else{
         echo "Digite novamente!";
     }

@@ -6,11 +6,13 @@
     <title>Exercício 5</title>
 </head>
 <body>
-<form action="index.php" method="get">
+<form action="ex5.php" method="get">
         <fieldset>
-            <legend>Digite a sua idade para saber se você poderá votar:</legend>
-        <label for="idade">idade</label>
-        <input type="text" name="idade" id="idade" placeholder="idade" required>
+            <legend>
+                Digite um letra para sabermos se ela é consoante ou vogal, digite em maiúculo 
+            </legend>
+        <label for="letra">letra</label>
+        <input type="text" name="letra" id="letra" placeholder="letra" required>
         <br>
 
           <br>
@@ -19,22 +21,16 @@
     </form>
 
     <?php
-    //Faça um programa no qual o usuário irá informar dois valores, e será exibido somente o número maior.
-     if (($_GET['idade']<16)){
-      echo "Não tem idade suficiente para votar!";
+    
+      if (($_GET['letra']== "A") || ($_GET['letra'] =="E") || ($_GET['letra'] =="I") || ($_GET['letra'] == "O") || ($_GET['letra']== "U") ||
+     ($_GET['letra'] == "Ão")){
+      echo "É uma vogal!";
         
     } 
-    else if (($_GET['idade']>=16 && ($_GET['idade']<18))){
-        echo "Você pode votar, mas não é obrigatório!";
-    }
-    else if (($_GET['idade']>=18 && ($_GET['idade']<=69))){
-        echo "Seu voto é obrigatório!";
-    }
-    else if (($_GET['idade']>=70)){
-        echo "Você pode votar, mas o seu voto não é obrigatório! ";
-    }
-    else{
-        echo "Digite novamente!";
+    
+    else if (($_GET['letra']== "B") || ($_GET['letra'] =="C") || ($_GET['letra'] =="D") || ($_GET['letra'] == "F") || ($_GET['letra']== "G") ||
+    ($_GET['letra'] == "Ão") ($_GET['letra'] == "Ão") ($_GET['letra'] == "Ão") ($_GET['letra'] == "Ão") ($_GET['letra'] == "Ão") ($_GET['letra'] == "Ão")){
+        echo "É uma consoante";
     }
     ?>
     

@@ -6,7 +6,7 @@
     <title>Exercício 2</title>
 </head>
 <body>
-<form action="index.php" method="get">
+<form action="ex2.php" method="get">
         <fieldset>
             <legend>Digite a sua idade para saber se você poderá votar:</legend>
         <label for="idade">idade</label>

@@ -6,7 +6,7 @@
     <title>Exercício 1</title>
 </head>
 <body>
-<form action="index.php" method="get">
+<form action="ex1.php" method="get">
         <fieldset>
             <legend>Digite a sua nota:</legend>
         <label for="nota">Nota</label>
